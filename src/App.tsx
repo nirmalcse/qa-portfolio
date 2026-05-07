@@ -58,7 +58,7 @@ export default function App() {
           className="flex justify-center gap-4"
         >
           <button 
-            onClick={() => window.open('/qa-portfolio/resume.pdf')}
+            onClick={() => window.open(`${import.meta.env.BASE_URL}resume.pdf`)}
             className="bg-white text-black px-6 py-3 rounded-full hover:bg-gray-200 transition"
           >
             Download Resume
