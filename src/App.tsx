@@ -12,15 +12,20 @@ export default function App() {
     show: { opacity: 1, y: 0 }
   };
 
+  const downloadResume = () => {
+    window.open(`${import.meta.env.BASE_URL}resume.pdf`, "_blank");
+  };
+
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
+    <div className="min-h-screen bg-gradient-to-br from-[#0a0f1f] via-[#0f172a] to-[#020617] text-white">
 
       {/* NAVBAR */}
-      <div className="flex justify-between items-center px-6 py-5 border-b border-white/10">
-        <h1 className="text-xl font-semibold">Nirmal Kumar</h1>
+      <div className="flex justify-between items-center px-6 py-5 border-b border-white/10 backdrop-blur">
+        <h1 className="text-xl font-semibold tracking-tight">Nirmal Kumar</h1>
+
         <button 
-          onClick={() => window.open('/resume.pdf')}
-          className="px-4 py-2 border border-white/30 rounded-full hover:bg-white hover:text-black transition"
+          onClick={downloadResume}
+          className="px-5 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-indigo-500 text-black font-medium hover:scale-105 transition"
         >
           Resume
         </button>
@@ -33,7 +38,7 @@ export default function App() {
           initial="hidden"
           animate="show"
           transition={{ duration: 0.6 }}
-          className="text-6xl md:text-7xl font-bold mb-6"
+          className="text-5xl md:text-7xl font-bold mb-6"
         >
           QA Engineering Manager – Payments
         </motion.h2>
@@ -43,11 +48,11 @@ export default function App() {
           initial="hidden"
           animate="show"
           transition={{ delay: 0.2 }}
-          className="text-lg text-white/60 max-w-2xl mx-auto mb-8"
+          className="text-lg text-white/70 max-w-2xl mx-auto mb-8"
         >
-          Leading quality strategy for Payment Gateway integrations and 3DS routing across
-          domestic & international card networks in the MENA region. Driving automation,
-          CI/CD pipelines, and secure payment systems.
+          Seasoned QA leader with 16+ years of experience driving quality strategy
+          for Payment Gateway integrations and 3DS authentication across global
+          card networks in the MENA region. विशेषज्ञ in automation, CI/CD, and secure fintech systems.
         </motion.p>
 
         <motion.div 
@@ -55,14 +60,15 @@ export default function App() {
           initial="hidden"
           animate="show"
           transition={{ delay: 0.4 }}
-          className="flex justify-center gap-4"
+          className="flex justify-center gap-4 flex-wrap"
         >
           <button 
-            onClick={() => window.open(`${import.meta.env.BASE_URL}resume.pdf`)}
-            className="bg-white text-black px-6 py-3 rounded-full hover:bg-gray-200 transition"
+            onClick={downloadResume}
+            className="bg-gradient-to-r from-cyan-400 to-indigo-500 text-black px-6 py-3 rounded-full hover:scale-105 transition"
           >
             Download Resume
           </button>
+
           <button 
             onClick={() => window.open('https://www.linkedin.com/in/rnirmalkumar/')}
             className="border border-white/30 px-6 py-3 rounded-full hover:bg-white hover:text-black transition"
@@ -75,7 +81,7 @@ export default function App() {
       {/* METRICS */}
       <section className="max-w-5xl mx-auto px-6 py-16 grid grid-cols-2 md:grid-cols-4 gap-6">
         {[
-          { value: "10+", label: "Years QA Experience" },
+          { value: "16+", label: "Years QA Experience" },
           { value: "5+", label: "Years DevOps Experience" },
           { value: "MENA", label: "Region Expertise" },
           { value: "99.9%", label: "Transaction Reliability" }
@@ -85,10 +91,10 @@ export default function App() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.1 }}
-            className="p-6 bg-[#111] rounded-2xl border border-white/10 text-center"
+            className="p-6 bg-white/5 rounded-2xl border border-white/10 text-center backdrop-blur"
           >
-            <div className="text-3xl font-semibold">{item.value}</div>
-            <div className="text-sm text-white/50">{item.label}</div>
+            <div className="text-3xl font-semibold text-cyan-400">{item.value}</div>
+            <div className="text-sm text-white/60">{item.label}</div>
           </motion.div>
         ))}
       </section>
@@ -101,7 +107,7 @@ export default function App() {
           {[
             {
               title: "Payment Gateway Integrations",
-              desc: "End-to-end validation of auth, capture, refund, and settlement flows"
+              desc: "End-to-end validation of authorization, capture, refund, and settlement flows"
             },
             {
               title: "3DS Authentication",
@@ -109,11 +115,11 @@ export default function App() {
             },
             {
               title: "MENA Payments",
-              desc: "Expertise in regional payment ecosystems and cross-border flows"
+              desc: "Deep expertise in regional payment ecosystems and cross-border flows"
             },
             {
               title: "Secure Transactions",
-              desc: "PCI compliance, fraud checks, and secure payment validation"
+              desc: "PCI compliance, fraud detection, and secure payment validation"
             }
           ].map((item, i) => (
             <motion.div
@@ -121,10 +127,10 @@ export default function App() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
-              className="p-6 bg-[#111] rounded-2xl border border-white/10"
+              className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur hover:scale-[1.02] transition"
             >
-              <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
-              <p className="text-white/60">{item.desc}</p>
+              <h4 className="text-xl font-semibold mb-2 text-cyan-400">{item.title}</h4>
+              <p className="text-white/70">{item.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -133,16 +139,17 @@ export default function App() {
       {/* ABOUT */}
       <section className="max-w-3xl mx-auto text-center px-6 py-16">
         <h3 className="text-3xl font-semibold mb-4">About Me</h3>
-        <p className="text-white/60 leading-relaxed">
-          QA Engineering Manager with extensive experience in the payments domain,
-          leading cross-functional QA and implementation teams. Currently driving
-          quality strategy for Payment Gateway integrations and 3DS routing across
-          domestic and international card networks in the MENA region.
+        <p className="text-white/70 leading-relaxed">
+          Seasoned QA Engineering Manager with extensive experience leading
+          cross-functional QA and implementation teams in the payments domain.
+          Currently driving quality strategy for Payment Gateway integrations
+          and 3DS routing across domestic and international card networks in
+          the MENA region.
           <br /><br />
-          Skilled in defining test governance, automation strategy, and end-to-end
-          validation for complex payment ecosystems. With 5+ years of DevOps experience,
-          I specialize in CI/CD pipeline optimization and delivering secure,
-          high-quality payment experiences.
+          Skilled in defining test governance, automation frameworks, and
+          end-to-end validation for complex payment ecosystems. With over 5 years
+          of DevOps experience, I specialize in CI/CD pipeline optimization and
+          delivering secure, scalable, high-quality payment experiences.
         </p>
       </section>
 
@@ -154,7 +161,7 @@ export default function App() {
           {[
             {
               title: "Payment Gateway QA",
-              desc: "Led QA for complete payment lifecycle including auth, capture & refunds"
+              desc: "Led QA for complete payment lifecycle including authorization, capture & refunds"
             },
             {
               title: "3DS Routing",
@@ -166,7 +173,7 @@ export default function App() {
             },
             {
               title: "Automation Framework",
-              desc: "Developed Selenium & Appium frameworks for fintech systems"
+              desc: "Developed Selenium & Appium frameworks for fintech platforms"
             }
           ].map((proj, i) => (
             <motion.div 
@@ -174,17 +181,17 @@ export default function App() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.15 }}
-              className="p-6 bg-[#111] rounded-2xl border border-white/10"
+              className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur hover:scale-[1.02] transition"
             >
-              <h4 className="text-xl font-semibold mb-2">{proj.title}</h4>
-              <p className="text-white/60">{proj.desc}</p>
+              <h4 className="text-xl font-semibold mb-2 text-cyan-400">{proj.title}</h4>
+              <p className="text-white/70">{proj.desc}</p>
             </motion.div>
           ))}
         </div>
       </section>
 
       {/* FOOTER */}
-      <div className="text-center p-6 text-sm text-white/40">
+      <div className="text-center p-6 text-sm text-white/40 border-t border-white/10">
         © {new Date().getFullYear()} Nirmal Kumar
       </div>
 
