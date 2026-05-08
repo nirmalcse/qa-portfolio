@@ -147,15 +147,17 @@ export default function App() {
       {/* ABOUT */}
       <section className="max-w-3xl mx-auto text-center px-6 py-16">
         <h3 className="text-3xl font-semibold mb-4">About Me</h3>
-        <p className="text-white/70 leading-relaxed">
-          Seasoned QA Engineering Manager with 16+ years of experience leading
-          large-scale quality initiatives in fintech and payments. Currently driving
-          Payment Gateway integrations and 3DS routing across global card networks
+        <p className="text-white/70 leading-relaxed mb-4">
+          Seasoned QA Engineering Manager with 16+ years of experience leading 
+          large-scale quality initiatives in fintech and payments. Currently driving 
+          Payment Gateway integrations and 3DS routing across global card networks 
           in the MENA region.
-          <br /><br />
-          Expert in automation frameworks, CI/CD pipelines, and DevOps practices,
-          delivering secure, scalable, and high-performance systems.
         </p>
+
+        <p className="text-white/70 leading-relaxed">
+        Expert in automation frameworks, CI/CD pipelines, and DevOps practices,
+        delivering secure, scalable, and high-performance systems.
+       </p>
       </section>
 
       {/* EXPERTISE */}
