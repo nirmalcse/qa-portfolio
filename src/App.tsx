@@ -40,7 +40,7 @@ export default function App() {
           transition={{ duration: 0.6 }}
           className="text-5xl md:text-7xl font-bold mb-6"
         >
-          QA Engineering Manager – Payments
+          QA Manager – Payments & Fintech
         </motion.h2>
 
         <motion.p 
