@@ -38,9 +38,12 @@ export default function App() {
           initial="hidden"
           animate="show"
           transition={{ duration: 0.6 }}
-          className="text-5xl md:text-7xl font-bold mb-6"
+          className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
         >
-          QA Manager – Payments & Fintech
+          QA Manager <br />
+          <span className="bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text text-transparent">
+            Payments & Fintech
+          </span>
         </motion.h2>
 
         <motion.p 
