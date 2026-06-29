@@ -71,8 +71,8 @@ qa-portfolio/
 
 ## 🤝 Connect with Me
 
-- LinkedIn: https://linkedin.com/in/YOUR_PROFILE  
-- Email: your.email@gmail.com  
+- LinkedIn: www.linkedin.com/in/rnirmalkumar 
+- Email: rnirmalkumar.qe@gmail.com
 
 ---
 
